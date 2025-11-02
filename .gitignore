@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.DS_Store
+
+# Generated icon files (regenerate with npm run generate-icons)
+icon16.png
+icon48.png
+icon128.png
+
+# Config files with sensitive credentials (if created)
+config.js
+credentials.json

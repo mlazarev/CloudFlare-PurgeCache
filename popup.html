@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudFlare Cache Purge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CloudFlare Cache Purge</h1>
+    <div class="url-display">
+      <strong>Current URL:</strong>
+      <div id="currentUrl">Loading...</div>
+    </div>
+    <button id="purgeBtn" class="purge-button">
+      <span class="button-text">Purge Cache</span>
+    </button>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
