@@ -10,3 +10,6 @@ icon128.png
 # Config files with sensitive credentials (if created)
 config.js
 credentials.json
+
+# Claude Context Files
+.claude/
