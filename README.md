@@ -81,8 +81,7 @@ The CloudFlare credentials are stored in `config.js` (which is excluded from ver
 
 ### Getting Your CloudFlare Credentials
 
-- **Zone ID**: Found in your CloudFlare dashboard under the "API" section
-- **Account ID**: Found in your CloudFlare dashboard URL or account settings
+- **Zone ID**: Found in your CloudFlare dashboard under the "API" section (this is the only credential you need besides the API token)
 
 ### Creating an API Token
 
