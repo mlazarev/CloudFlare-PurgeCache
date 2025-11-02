@@ -83,7 +83,38 @@ The CloudFlare credentials are stored in `config.js` (which is excluded from ver
 
 - **Zone ID**: Found in your CloudFlare dashboard under the "API" section
 - **Account ID**: Found in your CloudFlare dashboard URL or account settings
-- **API Token**: Create one at https://dash.cloudflare.com/profile/api-tokens with "Cache Purge" permissions
+
+### Creating an API Token
+
+CloudFlare offers two types of API tokens. Choose the one that fits your needs:
+
+#### Option 1: User API Token (Recommended for personal use)
+
+Create a token associated with your user profile:
+
+1. Go to https://dash.cloudflare.com/profile/api-tokens
+2. Click "Create Token"
+3. Set permissions to include "Cache Purge"
+4. Save the token
+
+**Use this option when**: You're using the extension personally and want the token tied to your user account.
+
+#### Option 2: Account API Token (Recommended for service/team use)
+
+Create a token at the account level:
+
+1. Go to your CloudFlare account settings
+2. Navigate to API Tokens under the account section
+3. Click "Create Token"
+4. Set permissions to include "Cache Purge"
+5. Save the token
+
+**Use this option when**: You prefer service tokens that are not associated with individual users and your desired API endpoints are compatible. This is ideal for shared tools, automation, or when you want tokens that persist independently of user accounts.
+
+#### Key Differences
+
+- **User API Tokens**: Tied to your user profile, revoked if user access changes
+- **Account API Tokens**: Not tied to individual users, better for service accounts and automation
 
 ### Updating Credentials
 
