@@ -1,7 +1,7 @@
 {
-  "name": "purgecache",
+  "name": "cloudflare-tools",
   "version": "1.1.0",
-  "description": "Chrome extension to purge CloudFlare cache for current URL",
+  "description": "Chrome extension for CloudFlare cache purging and access controls",
   "scripts": {
     "generate-icons": "node generate-icons.js"
   },

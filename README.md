@@ -1,21 +1,22 @@
-# CloudFlare Cache Purge - Chrome Extension
+# CloudFlare Tools - Chrome Extension
 
-A Chrome browser extension that allows you to purge the CloudFlare cache for the currently visited URL with a single click.
+A Chrome extension that bundles the day-to-day CloudFlare actions you need while browsing your site.
 
 ## Features
 
-- One-click cache purging for the current tab's URL
-- Real-time status updates
-- Clean, modern UI
-- Uses CloudFlare API v4
+- One-click cache purge for the current tab
+- "Allow My Access" button that detects your public IP and updates a pre-defined CloudFlare custom rule so you never lock yourself out
+- "Block Access" toggle that disables the same rule when you want to revoke the exception
+- Real-time status messaging in a clean popup UI
+- Built on CloudFlare API v4
 
 ## Installation
 
 ### Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd PurgeCache
+git clone <your-repository-url> cloudflare-tools
+cd cloudflare-tools
 ```
 
 ## Setup Instructions
@@ -64,19 +65,19 @@ This will create `icon16.png`, `icon48.png`, and `icon128.png` files.
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in the top right corner)
 3. Click "Load unpacked"
-4. Select the `PurgeCache` directory
-5. The extension should now appear in your extensions list
+4. Select the `cloudflare-tools` directory
+5. The extension should now appear in your extensions list as **CloudFlare Tools**
 
 ### 4. Pin the Extension (Optional)
 
 1. Click the puzzle piece icon in Chrome's toolbar
-2. Find "CloudFlare Cache Purge" in the list
+2. Find "CloudFlare Tools" in the list
 3. Click the pin icon to keep it visible in your toolbar
 
 ## Usage
 
 1. Navigate to any URL on your CloudFlare-enabled website
-2. Click the CloudFlare Cache Purge extension icon
+2. Click the CloudFlare Tools extension icon
 3. The popup will display the current URL
 4. Click the "Purge Cache" button
 5. Wait for the success message
