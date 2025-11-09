@@ -31,8 +31,18 @@ cp config.example.js config.js
 Then edit `config.js` and replace the placeholder values with your actual CloudFlare credentials:
 
 - **zoneId**: Your CloudFlare zone ID
-- **apiToken**: Your CloudFlare API token with cache purge permissions
+- **apiToken**: Your CloudFlare API token (needs cache purge **and** ruleset permissions, see below)
 - **apiEndpoint**: Update the zone ID in the URL to match your zone ID
+- **allowRuleDescription**: The description text of the CloudFlare custom rule the extension should manage (defaults to `Allow my own Access`)
+- **ipLookupUrl**: Optional public IP detection endpoint (defaults to `https://api.ipify.org?format=json`)
+
+### Required CloudFlare token permissions
+
+The extension now reads and updates a custom firewall rule, so the token must include both cache and ruleset scopes. The following setup has been validated:
+
+**Required permissions**
+- Account WAF:Edit (covers all ruleset read/write actions needed for the Allow/Block flows)
+- All zones → Cache Purge:Purge (needed for the primary cache purge feature)
 
 **IMPORTANT**: The `config.js` file is excluded from version control to protect your credentials.
 
@@ -70,13 +80,15 @@ This will create `icon16.png`, `icon48.png`, and `icon128.png` files.
 3. The popup will display the current URL
 4. Click the "Purge Cache" button
 5. Wait for the success message
+6. Click "Allow My Access" to detect your current public IP and update/enable the matching CloudFlare custom rule so you are always allowed through your firewall
+7. Use "Block Access" to temporarily disable that allow rule (useful when you want to remove the exception without editing CloudFlare manually)
 
 ## Configuration
 
 The CloudFlare credentials are stored in `config.js` (which is excluded from version control):
 
 - **Zone ID**: Your CloudFlare zone ID
-- **API Token**: Your CloudFlare API token with cache purge permissions
+- **API Token**: Your CloudFlare API token with cache purge **and CloudFlare Ruleset** permissions (see "Required CloudFlare token permissions")
 - **API Endpoint**: The CloudFlare API URL (includes your zone ID)
 
 ### Getting Your CloudFlare Credentials

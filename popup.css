@@ -67,6 +67,60 @@ h1 {
   cursor: not-allowed;
 }
 
+.secondary-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #287d3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondary-button:hover {
+  background: #216532;
+}
+
+.secondary-button:active {
+  background: #1a4e27;
+}
+
+.secondary-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.danger-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.danger-button:hover {
+  background: #b71c1c;
+}
+
+.danger-button:active {
+  background: #8e1212;
+}
+
+.danger-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
 .status {
   margin-top: 15px;
   padding: 10px;
